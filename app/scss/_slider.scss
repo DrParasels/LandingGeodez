@@ -1,0 +1,110 @@
+.slider {
+  padding: 70px 0;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &__inner{
+    margin: 0 80px;
+    position: relative;
+    @include media-1	{
+      margin: auto;
+    }
+    .slick-arrow {
+      font-size: 0;
+      position: absolute;
+      top: calc(50% - 19px);
+      z-index: 10;
+      width: 40px;
+      height: 40px;
+      background-color: $white;
+  
+      &::before {
+        position: absolute;
+        content: "";
+        mask: url("../images/sprite.svg#shevron") center / cover no-repeat;
+        background-color: $dark;
+        width: 19px;
+        height: 19px;
+        top: 11px;
+        left: 9px;
+      }
+    }
+  
+    .slick-prev {
+      right: -40px;
+      transform: scale(-1, 1);
+      
+    }
+  
+    .slick-next {
+      left: -40px;
+      
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    @include media-2	{
+      margin-top: 20px;
+    }
+  }
+
+  &__content {
+    margin-right: 20px;
+    position: relative;
+  }
+
+  &__title {
+    font-size: 24px;
+    span {
+      text-transform: uppercase;
+    }
+    margin-bottom: 15px;
+  }
+
+  &__location {
+    margin-bottom: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    max-width: 260px;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    margin-bottom: 30px;
+  }
+
+  &__text-item {
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+
+
+
+  &__img {
+    object-fit: contain;
+    max-width: 650px;
+    @include media-1	{
+      max-width: 500px;
+    }
+    @include media-2	{
+      max-width: 400px;
+    }
+    
+  }
+}
+

@@ -1,0 +1,58 @@
+.partners {
+  padding: 70px 0 45px;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &__reviews {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    @include media-2	{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-gap: 15px;
+    }
+    @include media-4	{
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 10px;
+    }
+  }
+
+  &__reviews-item {
+
+    &:not(:last-child) {
+      margin-right: 15px;
+      @include media-2	{
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__reviews-img {
+    border: 10px solid $silver;
+    @include media-2	{
+      margin: 0 auto;
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__item {
+    margin-bottom: 25px;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}
